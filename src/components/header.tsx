@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Film } from 'lucide-react';
+import { Film, Clapperboard } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export function Header() {
   return (
@@ -11,6 +12,14 @@ export function Header() {
             CineMatic
           </span>
         </Link>
+        <nav className="flex flex-1 items-center space-x-4">
+           <Button variant="link" asChild className="text-muted-foreground hover:text-primary">
+              <Link href="/movies">
+                <Clapperboard className="mr-2 h-4 w-4" />
+                Movie DB
+              </Link>
+            </Button>
+        </nav>
       </div>
     </header>
   );
