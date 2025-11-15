@@ -15,8 +15,9 @@ export interface LocalMovie {
   year: number;
   genres: string;
   poster: string;
-  youtube_trailer: string;
-  youtube_embed_id: string;
+  youtube_trailer: string | null;
+  youtube_embed_id: string | null;
+  dailymotion_trailer_id?: string | null;
   google_link: string;
 }
 
@@ -31,6 +32,8 @@ export default function MoviesPage() {
       movieId: 0, // dummy id
       download_link: '',
       score: 0,
+      youtube_trailer: localMovie.youtube_trailer || '',
+      youtube_embed_id: localMovie.youtube_embed_id || '',
     };
   };
 

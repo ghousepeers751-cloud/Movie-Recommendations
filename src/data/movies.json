@@ -9,5 +9,17 @@
     "youtube_trailer": "https://www.youtube.com/watch?v=Qah9sSIXJqk",
     "youtube_embed_id": "Qah9sSIXJqk",
     "google_link": "https://www.google.com/search?q=KGF+Chapter+1"
+  },
+  {
+    "title": "Raaz",
+    "description": "A couple on the verge of a divorce decide to give their marriage one last chance by going on a vacation to Ooty.",
+    "language": "Hindi",
+    "year": 2002,
+    "genres": "Horror, Thriller",
+    "poster": "https://example.com/raaz_poster.jpg",
+    "youtube_trailer": null,
+    "youtube_embed_id": null,
+    "dailymotion_trailer_id": "x9nfddg",
+    "google_link": "https://www.google.com/search?q=Raaz+movie"
   }
 ]
