@@ -23,7 +23,7 @@ const MovieSchema = z.object({
   language: z.string().describe('The language of the movie.'),
   genres: z.string().describe('The genres of the movie.'),
   year: z.number().optional().describe('The year the movie was released.'),
-  poster: z.string().describe('URL of the movie poster image.'),
+  poster: z.string().describe("URL of the movie poster image, from 'image.tmdb.org'."),
   description: z.string().describe('A short description of the movie.'),
   youtube_trailer: z.string().describe('The URL of the movie trailer on YouTube.'),
   youtube_embed_id: z.string().describe('The YouTube embed ID for the trailer.'),
@@ -49,7 +49,9 @@ const recommendFromTextPrompt = ai.definePrompt({
 
 Description: {{{description}}}
 
-Return ONLY a JSON object with a 'recommendations' property, which is an array of movies. Each movie object should include the movieId, title, language, genres, year, poster, description, youtube_trailer, youtube_embed_id, google_link, download_link, and score.
+Return ONLY a JSON object with a 'recommendations' property, which is an array of movies. 
+Each movie object should include the movieId, title, language, genres, year, poster, description, youtube_trailer, youtube_embed_id, google_link, download_link, and score.
+For the 'poster' field, you must provide a full, valid image URL from 'image.tmdb.org'. For example: 'https://image.tmdb.org/t/p/w500/path-to-poster.jpg'. Do not use placeholders.
 `,
 });
 
