@@ -49,7 +49,7 @@ const recommendFromTextPrompt = ai.definePrompt({
 
 Description: {{{description}}}
 
-Return the recommendations as a JSON array of movies, including the movieId, title, language, genres, year, poster, description, youtube_trailer, youtube_embed_id, google_link, download_link, and score.
+Return ONLY a JSON object with a 'recommendations' property, which is an array of movies. Each movie object should include the movieId, title, language, genres, year, poster, description, youtube_trailer, youtube_embed_id, google_link, download_link, and score.
 `,
 });
 
