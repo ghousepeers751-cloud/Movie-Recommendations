@@ -1,3 +1,4 @@
+
 [
   {
     "title": "KGF Chapter 1",
@@ -8,6 +9,7 @@
     "poster": "https://image.tmdb.org/t/p/w500/vQjg1Ym33JAgD32T14sC5HkAsm.jpg",
     "youtube_trailer": "https://www.youtube.com/watch?v=Qah9sSIXJqk",
     "youtube_embed_id": "Qah9sSIXJqk",
+    "dailymotion_trailer_id": null,
     "google_link": "https://www.google.com/search?q=KGF+Chapter+1"
   },
   {
@@ -16,7 +18,7 @@
     "language": "Hindi",
     "year": 2002,
     "genres": "Horror, Thriller",
-    "poster": "https://example.com/raaz_poster.jpg",
+    "poster": "https://picsum.photos/seed/Raaz/400/600",
     "youtube_trailer": null,
     "youtube_embed_id": null,
     "dailymotion_trailer_id": "x9nfddg",
@@ -33,5 +35,125 @@
     "youtube_embed_id": "nXsTxaHmmTo",
     "dailymotion_trailer_id": null,
     "google_link": "https://www.google.com/search?q=Bhoot+Part+One+The+Haunted+Ship"
+  },
+  {
+    "title": "1920",
+    "description": "A married couple is forced to move into a haunted house in 1920.",
+    "language": "Hindi",
+    "year": 2008,
+    "genres": "Horror, Mystery, Romance",
+    "poster": "https://picsum.photos/seed/1920/400/600",
+    "youtube_trailer": "https://www.youtube.com/watch?v=tj814hcan3c",
+    "youtube_embed_id": "tj814hcan3c",
+    "dailymotion_trailer_id": null,
+    "google_link": "https://www.google.com/search?q=1920+movie"
+  },
+  {
+    "title": "Phoonk",
+    "description": "An atheist's daughter is apparently targeted by black magic.",
+    "language": "Hindi",
+    "year": 2008,
+    "genres": "Horror, Thriller",
+    "poster": "https://picsum.photos/seed/Phoonk/400/600",
+    "youtube_trailer": "https://www.youtube.com/watch?v=s1a20BqaXdw",
+    "youtube_embed_id": "s1a20BqaXdw",
+    "dailymotion_trailer_id": null,
+    "google_link": "https://www.google.com/search?q=Phoonk+movie"
+  },
+  {
+    "title": "Ragini MMS",
+    "description": "A couple's weekend getaway is recorded by hidden cameras, capturing paranormal activity.",
+    "language": "Hindi",
+    "year": 2011,
+    "genres": "Horror, Thriller",
+    "poster": "https://picsum.photos/seed/Ragini MMS/400/600",
+    "youtube_trailer": "https://www.youtube.com/watch?v=cHlvV_DF3NE",
+    "youtube_embed_id": "cHlvV_DF3NE",
+    "dailymotion_trailer_id": null,
+    "google_link": "https://www.google.com/search?q=Ragini+MMS+movie"
+  },
+  {
+    "title": "Tumbbad",
+    "description": "A mythological story about a goddess who created the entire universe. The plot revolves around the consequences when humans build a temple for her first-born.",
+    "language": "Hindi",
+    "year": 2018,
+    "genres": "Horror, Fantasy, Drama",
+    "poster": "https://picsum.photos/seed/Tumbbad/400/600",
+    "youtube_trailer": null,
+    "youtube_embed_id": null,
+    "dailymotion_trailer_id": "x9dg7h0",
+    "google_link": "https://www.google.com/search?q=Tumbbad+movie"
+  },
+  {
+    "title": "Stree",
+    "description": "In the small town of Chanderi, the menfolk live in fear of an evil spirit named 'Stree' who abducts men at night.",
+    "language": "Hindi",
+    "year": 2018,
+    "genres": "Horror, Comedy",
+    "poster": "https://picsum.photos/seed/Stree/400/600",
+    "youtube_trailer": null,
+    "youtube_embed_id": null,
+    "dailymotion_trailer_id": "x8jgm8t",
+    "google_link": "https://www.google.com/search?q=Stree+movie"
+  },
+  {
+    "title": "Pari",
+    "description": "A man attempts to help a woman he finds under strange circumstances, who seems to be a victim of abuse.",
+    "language": "Hindi",
+    "year": 2018,
+    "genres": "Horror, Mystery",
+    "poster": "https://picsum.photos/seed/Pari/400/600",
+    "youtube_trailer": "https://www.youtube.com/watch?v=VGQDIJT_jtI",
+    "youtube_embed_id": "VGQDIJT_jtI",
+    "dailymotion_trailer_id": null,
+    "google_link": "https://www.google.com/search?q=Pari+movie"
+  },
+  {
+    "title": "Bulbbul",
+    "description": "A child bride grows into an enigmatic woman ruling a household, harboring a painful past as supernatural murders of men plague her village.",
+    "language": "Hindi",
+    "year": 2020,
+    "genres": "Horror, Drama",
+    "poster": "https://picsum.photos/seed/Bulbbul/400/600",
+    "youtube_trailer": "https://vk.com/video-227945617_456239139",
+    "youtube_embed_id": null,
+    "dailymotion_trailer_id": null,
+    "google_link": "https://www.google.com/search?q=Bulbbul+movie"
+  },
+  {
+    "title": "Laxmii",
+    "description": "A man who doesn't believe in ghosts is possessed by the spirit of a transgender person.",
+    "language": "Hindi",
+    "year": 2020,
+    "genres": "Horror, Comedy",
+    "poster": "https://picsum.photos/seed/Laxmii/400/600",
+    "youtube_trailer": "https://www.youtube.com/watch?v=ClYr2wqo0as",
+    "youtube_embed_id": "ClYr2wqo0as",
+    "dailymotion_trailer_id": null,
+    "google_link": "https://www.google.com/search?q=Laxmii+movie"
+  },
+  {
+    "title": "Bhool Bhulaiyaa 2",
+    "description": "When strangers Reet and Ruhan cross paths, their journey leads to an abandoned mansion and a dreaded spirit who has been trapped for 18 years.",
+    "language": "Hindi",
+    "year": 2022,
+    "genres": "Horror, Comedy",
+    "poster": "https://picsum.photos/seed/Bhool Bhulaiyaa 2/400/600",
+    "youtube_trailer": null,
+    "youtube_embed_id": null,
+    "dailymotion_trailer_id": "x944ive",
+    "google_link": "https://www.google.com/search?q=Bhool+Bhulaiyaa+2+movie"
+  },
+  {
+    "title": "Nanu Ki Jaanu",
+    "description": "A quirky horror comedy that tells the story of a ghost who falls in love with a crook.",
+    "language": "Hindi",
+    "year": 2018,
+    "genres": "Horror, Comedy",
+    "poster": "https://picsum.photos/seed/Nanu Ki Jaanu/400/600",
+    "youtube_trailer": "https://www.youtube.com/watch?v=zC4ax1eO2Mo",
+    "youtube_embed_id": "zC4ax1eO2Mo",
+    "dailymotion_trailer_id": null,
+    "google_link": "https://www.google.com/search?q=Nanu+Ki+Jaanu+movie"
   }
 ]
