@@ -34,6 +34,7 @@ export default function MoviesPage() {
       score: 0,
       youtube_trailer: localMovie.youtube_trailer || '',
       youtube_embed_id: localMovie.youtube_embed_id || '',
+      dailymotion_trailer_id: localMovie.dailymotion_trailer_id || null,
     };
   };
 
