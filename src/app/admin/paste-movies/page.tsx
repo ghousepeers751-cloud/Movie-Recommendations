@@ -9,14 +9,17 @@ import { updateMoviesAction } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import moviesData from '@/data/movies.json';
 
+// Create a client-side copy of the imported data to allow for optimistic updates.
+let clientSideMoviesData = JSON.stringify(moviesData, null, 2);
+
 export default function PasteMoviesPage() {
     const [isLoading, setIsLoading] = useState(false);
     const [moviesJson, setMoviesJson] = useState('');
     const { toast } = useToast();
 
     useEffect(() => {
-        // Pretty-print the JSON data from the imported file
-        setMoviesJson(JSON.stringify(moviesData, null, 2));
+        // On initial load, populate the textarea with the current data.
+        setMoviesJson(clientSideMoviesData);
     }, []);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,7 +27,7 @@ export default function PasteMoviesPage() {
         setIsLoading(true);
 
         try {
-            // Basic validation to ensure it's a parseable JSON
+            // Basic validation to ensure it's parseable JSON.
             JSON.parse(moviesJson);
         } catch (error) {
             toast({
@@ -44,6 +47,9 @@ export default function PasteMoviesPage() {
                 title: "Update Successful",
                 description: res.message,
             });
+            // Optimistically update the client-side data and the textarea.
+            clientSideMoviesData = moviesJson;
+            setMoviesJson(moviesJson);
         } else {
              toast({
                 variant: 'destructive',
