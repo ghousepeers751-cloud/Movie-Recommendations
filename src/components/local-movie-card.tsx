@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { PlayCircle, ExternalLink } from 'lucide-react';
+import { PlayCircle, ExternalLink, VideoOff } from 'lucide-react';
 import type { LocalMovie } from '@/app/movies/page';
 import { Badge } from '@/components/ui/badge';
 
@@ -17,7 +17,34 @@ interface LocalMovieCardProps {
   onPlayTrailer: (movie: LocalMovie) => void;
 }
 
+function getYouTubeId(url: string): string | null {
+    if (!url) return null;
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+}
+
+function getDailyMotionId(url: string): string | null {
+    if (!url) return null;
+    const regExp = /^https?:\/\/(?:www\.)?dailymotion\.com\/video\/([\w-]+)/;
+    const match = url.match(regExp);
+    return match ? match[1] : null;
+}
+
+
 export function LocalMovieCard({ movie, onPlayTrailer }: LocalMovieCardProps) {
+  // Enhance movie object with extracted IDs for the player
+  const movieForPlayer: LocalMovie = { ...movie };
+  
+  if (movie.youtube_trailer && !movie.youtube_embed_id) {
+    movieForPlayer.youtube_embed_id = getYouTubeId(movie.youtube_trailer);
+  }
+  if (movie.youtube_trailer && movie.dailymotion_trailer_id) { // from the AI
+     movieForPlayer.dailymotion_trailer_id = getDailyMotionId(movie.youtube_trailer);
+  }
+
+  const canPlay = !!(movieForPlayer.youtube_embed_id || movieForPlayer.dailymotion_trailer_id);
+
   return (
     <Card className="flex h-full flex-col overflow-hidden border-2 border-transparent transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
       <CardHeader className="p-0">
@@ -49,9 +76,9 @@ export function LocalMovieCard({ movie, onPlayTrailer }: LocalMovieCardProps) {
         </p>
       </CardContent>
       <CardFooter className="grid grid-cols-2 gap-2 p-4 pt-0">
-         <Button onClick={() => onPlayTrailer(movie)} variant="default" className="col-span-2">
-          <PlayCircle />
-          Watch Trailer
+         <Button onClick={() => onPlayTrailer(movieForPlayer)} variant="default" className="col-span-2" disabled={!canPlay}>
+          {canPlay ? <PlayCircle /> : <VideoOff />}
+          {canPlay ? 'Watch Trailer' : 'Trailer N/A'}
         </Button>
         <Button variant="outline" asChild className="col-span-2">
             <a href={movie.google_link} target="_blank" rel="noopener noreferrer">
