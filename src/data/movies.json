@@ -21,5 +21,17 @@
     "youtube_embed_id": null,
     "dailymotion_trailer_id": "x9nfddg",
     "google_link": "https://www.google.com/search?q=Raaz+movie"
+  },
+  {
+    "title": "Bhoot",
+    "description": "A stock broker and his wife move into a new apartment, which is haunted by the ghost of its previous resident.",
+    "language": "Hindi",
+    "year": 2003,
+    "genres": "Horror",
+    "poster": "https://upload.wikimedia.org/wikipedia/en/a/a9/Bhoot_Poster.jpg",
+    "youtube_trailer": "https://www.youtube.com/watch?v=nXsTxaHmmTo",
+    "youtube_embed_id": "nXsTxaHmmTo",
+    "dailymotion_trailer_id": null,
+    "google_link": "https://www.google.com/search?q=Bhoot+2003+movie"
   }
 ]
