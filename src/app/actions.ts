@@ -1,7 +1,6 @@
 'use server';
 
 import { recommendFromText, RecommendFromTextInput } from '@/ai/flows/recommend-from-text';
-import { trainNcfModel, TrainNcfModelInput } from '@/ai/flows/train-ncf-model';
 import { augmentMovieDetails, AugmentMovieDetailsInput } from '@/ai/flows/augment-movie-details';
 import type { Movie } from '@/lib/types';
 import * as fs from 'fs/promises';
@@ -28,16 +27,6 @@ export async function getRecommendations(
   } catch (e: any) {
     console.error(e);
     return { recommendations: [], error: e.message || 'Failed to fetch recommendations.' };
-  }
-}
-
-export async function trainModelAction(input: TrainNcfModelInput) {
-  try {
-    const result = await trainNcfModel(input);
-    return result;
-  } catch (e: any) {
-    console.error(e);
-    return { modelTrained: false, message: e.message || 'Failed to train model.' };
   }
 }
 

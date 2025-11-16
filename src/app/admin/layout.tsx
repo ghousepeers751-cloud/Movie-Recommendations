@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Cog, Bot, Home, FileJson } from "lucide-react";
+import { Bot, Home, FileJson } from "lucide-react";
 
 export default function AdminLayout({
   children,
@@ -32,13 +32,6 @@ export default function AdminLayout({
               >
                 <FileJson className="h-4 w-4" />
                 Paste Movie Data
-              </Link>
-              <Link
-                href="/admin/train-ncf"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
-                <Cog className="h-4 w-4" />
-                NCF Model Trainer
               </Link>
               <Link
                 href="/admin/augment-movie"
