@@ -55,9 +55,7 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    allowedDevOrigins: [
-        "https://*.cluster-bqwaigqtxbeautecnatk4o6ynk.cloudworkstations.dev"
-    ]
+    
   }
 };
 
