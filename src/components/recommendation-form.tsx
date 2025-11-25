@@ -33,7 +33,6 @@ export function RecommendationForm({ onSearch, isLoading }: RecommendationFormPr
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border bg-card p-6 shadow-md">
-        <h2 className="text-center font-headline text-xl text-primary">Find Your Next Favorite Movie</h2>
         <div className="relative">
             <Input
                 type="text"
