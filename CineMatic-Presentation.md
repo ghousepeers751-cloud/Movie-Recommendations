@@ -10,6 +10,39 @@
 - **Generative AI:** Google's Gemini models via Genkit
 - **Deployment:** Serverless infrastructure
 
+### System Diagram
+
+```mermaid
+graph TD
+    subgraph "User's Browser (Client-Side)"
+        User[End User] --> FE[React UI Components in Next.js];
+        FE -- "1. User describes a movie" --> RF[RecommendationForm];
+    end
+
+    subgraph "Next.js Server (Server-Side)"
+        RF -- "2. Submits form" --> SA[Server Action: getRecommendations];
+        SA -- "3. Calls AI Flow with prompt" --> GF[Genkit Flow: recommendFromText];
+        GF -- "4. Sends prompt to LLM" --> LLM[Google Gemini LLM];
+        LLM -- "5. Returns structured JSON" --> GF;
+        GF -- "6. Returns recommendations" --> SA;
+        SA -- "7. Sends data to client" --> FE;
+    end
+    
+    subgraph "Local Data"
+      MDB[Movie DB Page] -.-> JSON[data/movies.json]
+    end
+
+    FE -- "8. Renders MovieCard components" --> User;
+    FE -- "Browse Movie DB" --> MDB;
+    
+    style User fill:#5f9,stroke:#333,stroke-width:2px
+    style FE fill:#9cf,stroke:#333,stroke-width:2px
+    style SA fill:#f99,stroke:#333,stroke-width:2px
+    style GF fill:#f99,stroke:#333,stroke-width:2px
+    style LLM fill:#f66,stroke:#333,stroke-width:2px
+    style JSON fill:#f0f,stroke:#333,stroke-width:2px
+```
+
 ### Core Components
 - **Next.js App Router:** For routing and server-side rendering (SSR).
 - **React Server Components (RSC):** To handle data fetching and logic on the server.
